@@ -1,0 +1,6 @@
+enum SharedPreferencesKeys { 
+  isDartTheme,
+  isFirstApp, 
+  
+  
+  }
