@@ -2,7 +2,8 @@
 
 class NavigationConstats{
 
-  static const String Cost_Calculator= "/";
+  static const String home= "/";
+  static const String Cost_Calculator= "/cost";
   static const String Plan = "/plan";
   static const String Profit = "/profit";
   static const String Statistic = "/statistic";

@@ -19,11 +19,14 @@ final goRouterProvider = Provider<NavigationGoRouter>((ref) => NavigationGoRoute
 class NavigationGoRouter{
 
   final GoRouter router = GoRouter(
-  initialLocation: NavigationConstats.Cost_Calculator,
+  initialLocation: NavigationConstats.home,
   debugLogDiagnostics: false,
 
   routes: <GoRoute>[
-    
+    GoRoute(
+      path: NavigationConstats.home,
+      builder: (BuildContext context, GoRouterState state) => MyHomePage()
+    ),
     GoRoute(
       path: NavigationConstats.Cost_Calculator,
       builder: (BuildContext context, GoRouterState state) => costCalculator()

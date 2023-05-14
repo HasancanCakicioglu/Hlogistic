@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hlogistic/feature/components/dropdown/expanded_section.dart';
-import 'package:hlogistic/feature/components/dropdown/scrool_bar.dart';
+import 'package:hlogistic/product/components/dropdown/expanded_section.dart';
+import 'package:hlogistic/product/components/dropdown/scrool_bar.dart';
 
 class DropDown extends StatefulWidget {
   @override

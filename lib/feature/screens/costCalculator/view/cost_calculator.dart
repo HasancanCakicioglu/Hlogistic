@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hlogistic/feature/components/drawer/navigation_rail.dart';
-
-import 'package:hlogistic/feature/components/dropdown/dropdown_main.dart';
+import 'package:hlogistic/product/components/drawer/navigation_rail.dart';
 import 'package:hlogistic/feature/screens/costCalculator/model/cost_calculator_model.dart';
 import 'package:hlogistic/feature/screens/costCalculator/model/datagrid_model.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
@@ -18,7 +16,7 @@ class _costCalculatorState extends State<costCalculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       
-      body:NavigationRailWidget()
+      body:Container(color: Colors.pink,)
     );
   }
 }
