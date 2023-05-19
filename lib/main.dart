@@ -32,8 +32,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ProviderScope(child: Consumer(builder: (context, watch, _) {
-      final theme = watch.watch<ThemeSettings>(themeProvider);
+    return ProviderScope(child: Consumer(builder: (context, WidgetRef ref, _) {
+      final theme = ref.watch<ThemeSettings>(themeProvider);
       //final routerController = watch.watch<NavigationGoRouter>(goRouterProvider);
       final deneme = NavigationGoRouter();
       print("bura çalişti");
@@ -61,13 +61,14 @@ class MyHomePage extends ConsumerWidget {
 
     return Scaffold(
         body: Consumer(
-          builder: (context, watch, child) {
+          builder: (context, WidgetRef ref, child) {
             final selectedIndex =
                 ref.watch(navigationRailProvider).selectedIndex;
+
             print("riverpod çALIŞTI = $selectedIndex");
             return Row(
               children: [
-                NavigationRailWidget(),
+                const NavigationRailWidget(),
                 Expanded(
                   child: ref.read(navigationRailProvider).pages[selectedIndex],
                 )
@@ -75,11 +76,14 @@ class MyHomePage extends ConsumerWidget {
             );
           },
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            ref.read<ThemeSettings>(themeProvider).toggleTheme();
-          },
-          child: const Icon(Icons.add),
-        ));
+        // floatingActionButton: FloatingActionButton(
+        //   onPressed: () {
+        //     ref.read<ThemeSettings>(themeProvider).toggleTheme();
+        //   },
+        //   child: const Icon(Icons.add),
+        // )
+        
+        
+        );
   }
 }

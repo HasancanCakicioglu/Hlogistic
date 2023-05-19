@@ -49,9 +49,9 @@ class _MyScrollbarState extends State<MyScrollbar> {
       color: Colors.orange,
       textDirection: Directionality.of(context),
       thickness: _kScrollbarThickness,
-      radius: Radius.circular(20),
+      radius: const Radius.circular(20),
       fadeoutOpacityAnimation: const AlwaysStoppedAnimation<double>(1.0),
-      padding: EdgeInsets.only(top:15,right:15,bottom: 5,left: 5),
+      padding: const EdgeInsets.only(top:15,right:15,bottom: 5,left: 5),
       
     );
   }

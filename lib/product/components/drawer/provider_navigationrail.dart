@@ -10,7 +10,16 @@ import 'package:hlogistic/feature/screens/statistic/view/statistic.dart';
 final navigationRailProvider = ChangeNotifierProvider((ref) => NavigationRailProvider());
 
 
+enum NavigationPagesEnum {
+  costCalculator,
+  plan,
+  statistic,
+  settings;
+}
+
+
 class NavigationRailProvider extends ChangeNotifier {
+
   List<Widget> pages = [
     costCalculator(),
     plan(),
@@ -18,6 +27,7 @@ class NavigationRailProvider extends ChangeNotifier {
     settings(),
   ];
   int _selectedIndex = 0;
+  bool extended = true;
 
   int get selectedIndex => _selectedIndex;
 
@@ -27,4 +37,5 @@ class NavigationRailProvider extends ChangeNotifier {
       notifyListeners();
     }
   }
+
 }
